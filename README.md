@@ -1,17 +1,17 @@
-steps 1st commit
-1, npm install -g pnpm@latest-10
-2, pnpm version
-3 pnpm create next-app@(latest or whatever you want) nameofproject
-4 cd nameofproject
-5 pnpm dev (to run)
-6 pnpm dlx shadcn ui@latest
-7 pnpm dlx shadcn@latest add button
+steps 1st commit</br>
+1, npm install -g pnpm@latest-10</br>
+2, pnpm version</br>
+3 pnpm create next-app@(latest or whatever you want) nameofproject</br>
+4 cd nameofproject</br>
+5 pnpm dev (to run)</br>
+6 pnpm dlx shadcn ui@latest</br>
+7 pnpm dlx shadcn@latest add button</br>
 
-8 pnpm add @radix/ui/react-slot
-9 pnpm dlx shadcn@latest add dropdown-menu
-we made components folder in which we created a new file called Header.js
-in layout put header in it
-in next.config.mjs we write
+8 pnpm add @radix/ui/react-slot</br>
+9 pnpm dlx shadcn@latest add dropdown-menu</br>
+we made components folder in which we created a new file called Header.js</br>
+in layout put header in it</br>
+in next.config.mjs we write</br>
 const nextConfig = {
     images:{
         remotePatterns: [
