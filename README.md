@@ -1,3 +1,36 @@
+steps 1st commit
+1, npm install -g pnpm@latest-10
+2, pnpm version
+3 pnpm create next-app@(latest or whatever you want) nameofproject
+4 cd nameofproject
+5 pnpm dev (to run)
+6 pnpm dlx shadcn ui@latest
+7 pnpm dlx shadcn@latest add button
+
+8 pnpm add @radix/ui/react-slot
+9 pnpm dlx shadcn@latest add dropdown-menu
+we made components folder in which we created a new file called Header.js
+in layout put header in it
+in next.config.mjs we write
+const nextConfig = {
+    images:{
+        remotePatterns: [
+            {
+                protocol: 'http',
+                hostname: 'image.tmdb.org',
+
+            },
+            {
+                protocol: 'https',
+                hostname: 'i.ibb.co'},
+
+                
+        ],
+    }
+};
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
