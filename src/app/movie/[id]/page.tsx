@@ -17,12 +17,25 @@ export const metadata: Metadata = {
 interface Props {
   params: {
     id: string;
+    movie: {
+      id: number;
+      title: string;
+      overview: string;
+      vote_average: number;
+      vote_count: number;
+      release_date: string;
+      genres: { id: number; name: string }[];
+      backdrop_path: string;
+      original_title: string;
+      tagline: string;
+      status: string;
+    }
   };
 }
 
 const MovieDetails = async ({ params: { id } }: Props) => {
   const movies = await getMovieVideos(id);
-  const videos = movies.map((movie: any) => ({
+  const videos = movies.map((movie: { id: string; iso_639_1: string; iso_3166_1: string; key: string; name: string; official: boolean; published_at: string; site: string; size: number; type: string }) => ({
     id: movie.id,
     iso_639_1: movie.iso_639_1,
     iso_3166_1: movie.iso_3166_1,
@@ -34,7 +47,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
     size: movie.size,
     type: movie.type,
   }));
-  const details: any = await getMovieDetails(id);
+  const details = await getMovieDetails(id);
   const popoularMovies = await getPopularMovies();
 
   return (
@@ -77,7 +90,7 @@ const MovieDetails = async ({ params: { id } }: Props) => {
             </p>
             <p className="text-gray-200 text-sm">
               Genres:{" "}
-              {details?.genres.map((item: any) => (
+              {details?.genres.map((item: { id: number; name: string }) => (
                 <span key={item?.id} className="text-white font-medium mr-1">
                   {item?.name},
                 </span>

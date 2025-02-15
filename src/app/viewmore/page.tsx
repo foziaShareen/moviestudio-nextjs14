@@ -9,11 +9,12 @@ import {
 interface Props {
   searchParams: {
     title: string;
+    
   };
 }
 
 const ViewMorePage = async ({ searchParams: { title } }: Props) => {
-  let movies: any = null;
+  let movies= null;
 
   if (title === "Now Playing") {
     movies = await getNowPlayingMovies();
