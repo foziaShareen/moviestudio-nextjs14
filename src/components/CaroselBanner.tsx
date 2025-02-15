@@ -1,15 +1,15 @@
-import { getDiscoverMovies } from '@/lib/getMovies'
-import React from 'react'
-import HeroCarousel from './HeroCarousel'
-interface Props{
-    id?:string,
-    keywords:string
-}
-const CaroselBanner =async ({id,keywords}:Props) => {
-    const movies =await getDiscoverMovies(id,keywords)
-    console.log(movies)
+import { getDiscoverMovies } from "@/lib/getMovies";
+import HeroCarousel from "./HeroCarousel";
 
-    return <HeroCarousel movies={movies}/>
+interface Props {
+  id?: string;
+  keywords?: string;
 }
 
-export default CaroselBanner
+const CaroselBanner = async ({ id, keywords }: Props) => {
+  const movies = await getDiscoverMovies(id, keywords);
+
+  return <HeroCarousel movies={movies} />;
+};
+
+export default CaroselBanner;
