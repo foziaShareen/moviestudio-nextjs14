@@ -1,3 +1,25 @@
+step 2nd commit
+in components DropDownMenu.tsx </br>
+pnpm dlx shadcn@latest add form</br>
+pnpm dlx shadcn@latest add input</br>
+
+pnpm add next-themes</br>
+
+go to embla website , select react, from get started
+</br>
+pnpm add embla-carousel-react </br>
+pnpm add embla-carousel-autoplay
+
+
+
+
+
+
+
+
+
+
+
 steps 1st commit</br>
 1, npm install -g pnpm@latest-10</br>
 2, pnpm version</br>
