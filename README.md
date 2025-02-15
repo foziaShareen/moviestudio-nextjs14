@@ -9,7 +9,7 @@ go to embla website , select react, from get started
 </br>
 pnpm add embla-carousel-react </br>
 pnpm add embla-carousel-autoplay
-
+apply flex 0 ,0, 100% in tailwind.config.ts
 
 
 
